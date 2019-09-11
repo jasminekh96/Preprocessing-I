@@ -130,25 +130,64 @@ table {
 * {
   box-sizing: border-box;
 }
+@font-face {
+  font-family: 'Domine';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Domine'), local('Domine-Regular'), url(https://fonts.gstatic.com/s/domine/v7/L0x8DFMnlVwD4h3hu_qi.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Source Serif Pro'), local('SourceSerifPro-Regular'), url(https://fonts.gstatic.com/s/sourceserifpro/v7/neIQzD-0qpwxpaWvjeD0X88SAOeauXQ-pQ.ttf) format('truetype');
+}
 html,
 body {
   height: 100%;
+  font-family: 'Source Serif Pro', serif;
 }
 header {
   display: flex;
   justify-content: space-between;
+  font-family: 'Source Serif Pro', serif;
+  background-color: #afeeee;
 }
-header nav {
+header nav a {
   display: flex;
   justify-content: space-between;
   vertical-align: top;
-}
-header nav a {
   margin-right: 65px;
   font-size: 14px;
-  color: gray;
+  color: black;
   text-decoration: none;
+  padding: 30px;
 }
 header nav a:hover {
   text-decoration: underline;
+}
+.profphoto {
+  width: 30%;
+}
+h1,
+h2 {
+  font-size: 62.5%;
+  font-size: 1.8rem;
+  color: #483D8B;
+  font-family: 'Domine', serif;
+  margin-top: 20px;
+}
+h1 {
+  padding: 10%;
+}
+p {
+  margin: 20px;
+  font-size: 62.5%;
+  font-size: 1.3rem;
+}
+.all {
+  border: 1px solid black;
+  flex-direction: column;
 }

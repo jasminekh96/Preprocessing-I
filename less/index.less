@@ -134,27 +134,57 @@ table {
 	box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Domine|Source+Serif+Pro&display=swap');
+
+@name-color: #483D8B;
+@body: 'Source Serif Pro', serif;
+@header: 'Domine', serif;
+
 html,
 body {
 	height: 100%;
+	font-family: @body;
 }
 header {
 	display: flex;
 	justify-content: space-between;
+	font-family: @body;
+	background-color: #afeeee;
+	nav a {
+		display: flex;
+		justify-content: space-between;
+		vertical-align: top;
+		margin-right: 65px;
+		font-size: 14px;
+		color: black;
+		text-decoration: none;
+		padding: 30px;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }
-header nav {
-	display: flex;
-	justify-content: space-between;
-	vertical-align: top;
-}
-header nav a {
-	margin-right: 65px;
-	font-size: 14px;
-	color: gray;
-	text-decoration: none;
-}
-header nav a:hover {
-	text-decoration: underline;
-}
+
 .profphoto {
+	width: 30%;
+}
+h1,
+h2 {
+	font-size: 62.5%;
+	font-size: 1.8rem;
+	color: @name-color;
+	font-family: @header;
+	margin-top: 20px;
+}
+h1 {
+	padding: 10%;
+}
+p {
+	margin: 20px;
+	font-size: 62.5%;
+	font-size: 1.3rem;
+}
+.all {
+	border: 1px solid black;
+	flex-direction: column;
 }

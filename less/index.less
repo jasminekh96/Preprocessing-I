@@ -134,12 +134,26 @@ table {
 	box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Domine|Source+Serif+Pro&display=swap');
+@import 'https://fonts.googleapis.com/css?family=Domine|Source+Serif+Pro&display=swap';
 
-@name-color: #483D8B;
+@name-color: #483d8b;
 @body: 'Source Serif Pro', serif;
 @header: 'Domine', serif;
 
+.cards() {
+	border: 2px dotted black;
+}
+.headings() {
+	font-size: 62.5%;
+	font-size: 1.8rem;
+	color: @name-color;
+	font-family: @header;
+}
+.flex() {
+	display: flex;
+	flex-direction: column;
+	margin: 60px;
+}
 html,
 body {
 	height: 100%;
@@ -155,10 +169,10 @@ header {
 		justify-content: space-between;
 		vertical-align: top;
 		margin-right: 65px;
-		font-size: 14px;
+		font-size: 16px;
 		color: black;
 		text-decoration: none;
-		padding: 30px;
+		padding: 50px;
 		&:hover {
 			text-decoration: underline;
 		}
@@ -170,21 +184,55 @@ header {
 }
 h1,
 h2 {
-	font-size: 62.5%;
-	font-size: 1.8rem;
-	color: @name-color;
-	font-family: @header;
-	margin-top: 20px;
+	.headings();
+	h1 {
+		margin-top: 100px;
+	}
 }
-h1 {
-	padding: 10%;
-}
+
 p {
 	margin: 20px;
 	font-size: 62.5%;
 	font-size: 1.3rem;
 }
-.all {
-	border: 1px solid black;
-	flex-direction: column;
+
+.experience {
+	.cards();
+	.flex();
+}
+h3,
+h4 {
+	font-size: 62.5%;
+	font-size: 1.3rem;
+	margin-left: 10px;
+	color: #663399;
+	margin-top: 10px;
+}
+h4 {
+	font-style: italic;
+}
+
+@media (max-width: 500px) {
+	body {
+		background: grey;
+	}
+	header {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	font-family: @body;
+	background-color: #afeeee;
+	nav a {
+		display: flex;
+		justify-content: space-between;
+		vertical-align: top;
+		margin-right: 65px;
+		font-size: 13px;
+		color: black;
+		text-decoration: none;
+		padding: 50px;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }

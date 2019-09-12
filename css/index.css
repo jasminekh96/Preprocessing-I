@@ -160,10 +160,10 @@ header nav a {
   justify-content: space-between;
   vertical-align: top;
   margin-right: 65px;
-  font-size: 14px;
+  font-size: 16px;
   color: black;
   text-decoration: none;
-  padding: 30px;
+  padding: 50px;
 }
 header nav a:hover {
   text-decoration: underline;
@@ -175,19 +175,40 @@ h1,
 h2 {
   font-size: 62.5%;
   font-size: 1.8rem;
-  color: #483D8B;
+  color: #483d8b;
   font-family: 'Domine', serif;
-  margin-top: 20px;
 }
-h1 {
-  padding: 10%;
+h1 h1,
+h2 h1 {
+  margin-top: 100px;
 }
 p {
   margin: 20px;
   font-size: 62.5%;
   font-size: 1.3rem;
 }
-.all {
-  border: 1px solid black;
+.experience {
+  border: 2px dotted black;
+  display: flex;
   flex-direction: column;
+  margin: 60px;
+}
+h3,
+h4 {
+  font-size: 62.5%;
+  font-size: 1.3rem;
+  margin-left: 10px;
+  color: #663399;
+  margin-top: 10px;
+}
+h4 {
+  font-style: italic;
+}
+@media (max-width: 500px) {
+  body {
+    background: grey;
+  }
+  .profphoto {
+    width: 20px;
+  }
 }

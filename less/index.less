@@ -4,19 +4,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -25,21 +93,34 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
 body {
 	line-height: 1;
 }
-ol, ul {
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
@@ -50,10 +131,108 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+@import 'https://fonts.googleapis.com/css?family=Domine|Source+Serif+Pro&display=swap';
+
+@name-color: #483d8b;
+@body: 'Source Serif Pro', serif;
+@header: 'Domine', serif;
+
+.cards() {
+	border: 2px dotted black;
+}
+.headings() {
+	font-size: 62.5%;
+	font-size: 1.8rem;
+	color: @name-color;
+	font-family: @header;
+}
+.flex() {
+	display: flex;
+	flex-direction: column;
+	margin: 60px;
+}
+html,
+body {
+	height: 100%;
+	font-family: @body;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	font-family: @body;
+	background-color: #afeeee;
+	nav a {
+		display: flex;
+		justify-content: space-between;
+		vertical-align: top;
+		margin-right: 65px;
+		font-size: 16px;
+		color: black;
+		text-decoration: none;
+		padding: 50px;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }
 
+.profphoto {
+	width: 30%;
+}
+h1,
+h2 {
+	.headings();
+	h1 {
+		margin-top: 100px;
+	}
+}
+
+p {
+	margin: 20px;
+	font-size: 62.5%;
+	font-size: 1.3rem;
+}
+
+.experience {
+	.cards();
+	.flex();
+}
+h3,
+h4 {
+	font-size: 62.5%;
+	font-size: 1.3rem;
+	margin-left: 10px;
+	color: #663399;
+	margin-top: 10px;
+}
+h4 {
+	font-style: italic;
+}
+
+@media (max-width: 500px) {
+	body {
+		background: grey;
+	}
+	header {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	font-family: @body;
+	background-color: #afeeee;
+	nav a {
+		display: flex;
+		justify-content: space-between;
+		vertical-align: top;
+		margin-right: 65px;
+		font-size: 13px;
+		color: black;
+		text-decoration: none;
+		padding: 50px;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
